@@ -328,42 +328,49 @@ ul {
 
 .b-blue {
     margin-bottom: -2px;
-    background-image: url(../img/first-bg.png);
+    background-image: url(../img/bgImg/1_yJccbiTGbc0hQainKAQD2g.jpeg);
     background-repeat: no-repeat;
     background-size: cover;
     width: 100%;
     overflow: hidden;
     background-attachment: fixed;
+    background-position: 0% 70%;
 }
 
 .b-red {
-    background-image: url(../img/second-bg.png);
+    background-image: url(../img/bgImg/1_yJccbiTGbc0hQainKAQD2g.jpeg);
     background-repeat: no-repeat;
     background-size: cover;
     width: 100%;
     overflow: hidden;
     background-attachment: fixed;
     margin-top: -2px;
+    background-position: 0% 70%;
+
 }
 
 .b-green {
     margin-top: -2px;
-    background-image: url(../img/third-bg.png);
+    background-image: url(../img/bgImg/fc4319d9c93f88e9b7af1b6979e3bee6.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     width: 100%;
     overflow: hidden;
     background-attachment: fixed;
+    background-position: 0% 70%;
+
 }
 
 .b-yellow {
     margin-top: -1px;
-    background-image: url(../img/fourth-bg.png);
+    background-image: url(../img/bgImg/fc4319d9c93f88e9b7af1b6979e3bee6.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     width: 100%;
     overflow: hidden;
     background-attachment: fixed;
+    background-position: center;
+
 }
 
 /*
@@ -374,7 +381,7 @@ ul {
 
 .home-content {
     height: 90vh;
-    background-color: rgba(45, 58, 75, 0.5);
+    background-color:rgba(45, 58, 75, 0.904);
     padding: 0px 60px;
     position: relative;
     margin: 10vh auto 0 auto;
@@ -444,7 +451,7 @@ ul {
 
 .about-content {
     height: 100vh;
-    background-color: rgba(45, 58, 75, 0.5);
+    background-color: rgba(45, 58, 75, 0.904);
     padding: 0px 60px;
     position: relative;
     margin: 0 auto;
@@ -507,7 +514,7 @@ ul {
 
 .projects-content {
     height: 100vh;
-    background-color: rgba(45, 58, 75, 0.5);
+    background-color: rgba(45, 58, 75, 0.904);
     padding: 0px 220px;
     padding-left: 220px;
     position: relative;
@@ -572,7 +579,7 @@ ul {
 
 .contact-content {
     height: 100vh;
-    background-color: rgba(45, 58, 75, 0.5);
+    background-color: rgba(45, 58, 75, 0.904);
     padding: 0px 60px;
     position: relative;
     margin: 0 auto;
