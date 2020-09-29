@@ -1,7 +1,7 @@
 <template>
     <!-- side nav -->
     <div>
-        <div class="topNav" :class="{ afterscroll: afterscroll }">
+        <div class="topNav" :class="{ afterscroll: afterscroll }"><!-- For show nav when scrolls -->
             <a href>
                 <img src="../assets/ryzen_nav.png" height="65px" alt srcset />
             </a>
@@ -19,7 +19,7 @@
                 @click="toggleMenu()"
                 :class="{ 'burger--active': isClicked }"
                 class="burger"
-            >
+            > <!-- Add class for change burger symbol -->
                 <div class="burger__patty"></div>
             </div>
             <ul class="nav__list" :class="{ 'nav__list--active': isClicked }">
@@ -29,6 +29,7 @@
                         :class="{ nav__link__active: isHome }"
                         class="nav__link c-blue"
                     >
+                    <!-- Add class for see which  page  is open -->
                         <img src="img/home-icon.png" alt />
 					<span class="tooltiptext">Home</span>
                     </a>
@@ -39,6 +40,7 @@
                         :class="{ nav__link__active: isAbout }"
                         class="nav__link c-yellow scrolly"
                     >
+                    <!-- Add class for see which  page  is open -->
                         <img src="img/about-icon.png" alt />
 					<span class="tooltiptext">About</span>
                     </a>
@@ -50,6 +52,7 @@
                         :class="{ nav__link__active: isProject }"
                         class="nav__link c-red"
                     >
+                    <!-- Add class for see which  page  is open -->
                         <img src="img/projects-icon.png" alt />
 					<span class="tooltiptext">Projects</span>
                     </a>
@@ -61,6 +64,7 @@
                         :class="{ nav__link__active: isContact }"
                         class="nav__link c-green"
                     >
+                    <!-- Add class for see which  page  is open -->
                         <img src="img/contact-icon.png" alt />
 					<span class="tooltiptext">Contact</span>
                     </a>
@@ -93,6 +97,7 @@ export default {
             this.y = window.pageYOffset;
             this.h = window.innerHeight;
         },
+        //Under This Methods For Mark The Side Menu ! this isnt perfect i will update it !!!
         markHome() {
             if (this.y < this.h * 0.75) {
                 this.isHome = true;
@@ -130,6 +135,7 @@ export default {
         },
     },
     mounted() {
+        // Auto Calling A method when scroll the page
         window.addEventListener("scroll", this.scrollpos);
         window.addEventListener("scroll", this.markHome);
         window.addEventListener("scroll", this.markAbout);

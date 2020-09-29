@@ -4,7 +4,7 @@
 			----------------------------------------------------------------------->
         <section class="panel b-blue" id="1">
             <article class="panel__wrapper">
-                <div class="panel__content" :class="{ 'panel__content--active': isLoad }">
+                <div class="panel__content" :class="{ 'panel__content--active': isLoad }"> <!-- Using Vue Bind Class To see nav when scroll -->
                     <div class="container">
                         <div class="row">
                             <div class="col-md-12">
@@ -41,6 +41,7 @@ export default {
         },
     },
     mounted() {
+        // Auto Calling A method when scroll the page
         window.addEventListener("load", this.onWindowLoad);
     },
 };

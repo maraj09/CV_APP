@@ -60,7 +60,7 @@ ul {
     text-align: center;
     letter-spacing: 1px;
 }
-
+/* Side Menu  ---------------------------------------------------------*/
 .nav {
     position: fixed;
     z-index: 1;
@@ -131,6 +131,8 @@ ul {
         height: 90vh;
     }
 }
+/* Side Menu End  ---------------------------------------------------------*/
+/* Top Sticky Nav ---------------------------------------------------------*/
 .topNav {
     margin-top: 10px;
     position: fixed;
@@ -199,6 +201,8 @@ ul {
         margin-right: 70px;
     }
 }
+/* Top Sticky Nav End ---------------------------------------------------------*/
+/* Burger Logo -----------------------------------------------------------------*/
 .burger {
     height: 71px;
     margin: -1px 0;
@@ -277,6 +281,7 @@ ul {
         transform: scale(0.8) rotate(90deg);
     }
 }
+/* Burger Logo End -----------------------------------------------------------------*/
 
 .panel {
     margin: 0;

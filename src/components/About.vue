@@ -4,7 +4,7 @@
         ------------------------------------------------------------------------------>
         <section class="panel b-yellow" id="2">
             <article class="panel__wrapper">
-                <div class="panel__content " :class="{ 'panel__content--active': inAbout }">
+                <div class="panel__content " :class="{ 'panel__content--active': inAbout }"> <!-- Using Vue Bind Class To see nav when scroll -->
                     <div class="container">
                         <div class="row">
                             <div class="col-md-12 ">
@@ -73,6 +73,7 @@ export default {
     },
     methods: {
         loadScroll() {
+            // getting the current scroll and vh position
             var windowHeight = window.innerHeight;
             var scrollPosition = window.pageYOffset;
             if (scrollPosition > windowHeight * 0.75) {
@@ -84,6 +85,7 @@ export default {
         },
     },
     mounted() {
+        // Auto Calling A method when scroll the page
         window.addEventListener("scroll", this.loadScroll);
     },
 };

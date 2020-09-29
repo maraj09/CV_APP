@@ -4,7 +4,7 @@
 		-------------------------------------------------------------------------->
         <section class="panel b-red" id="3">
             <article class="panel__wrapper">
-                <div class="panel__content" :class="{ 'panel__content--active': inProject }">
+                <div class="panel__content" :class="{ 'panel__content--active': inProject }"><!-- Using Vue Bind Class To see nav when scroll -->
                     <div class="container">
                         <div class="row">
                             <div class="col-md-12 ">
@@ -97,16 +97,13 @@
         </section>
         <!-- Project End -------------------------------------------------------
 		-------------------------------------------------------------------------->
-        <Navpro :isProject="inProject" />
     </div>
 </template>
 
 <script>
-import Navpro from "./Nav.vue";
-
 export default {
     components: {
-        Navpro,
+        
     },
     data() {
         return {
@@ -115,6 +112,7 @@ export default {
     },
     methods: {
         loadScroll() {
+            // getting the current scroll and vh position
             var windowHeight = window.innerHeight;
             var scrollPosition = window.pageYOffset;
             if (scrollPosition > windowHeight * 1.5) {
@@ -125,6 +123,7 @@ export default {
         },
     },
     mounted() {
+        // Auto Calling A method when scroll the page
         window.addEventListener("scroll", this.loadScroll);
     },
 };

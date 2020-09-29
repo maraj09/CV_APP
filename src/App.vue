@@ -1,35 +1,36 @@
 <template>
     <div>
+        <!-- Calling All The Components -->
         <Nav />
         <Home />
-		<About/>
-		<Project/>
-		<Contact/>
-        <Footer/>
+        <About />
+        <Project />
+        <Contact />
+        <Footer />
     </div>
 </template>
 
 <script>
 import Home from "./components/Home.vue";
 import Nav from "./components/Nav.vue";
-import About from './components/About.vue';
-import Project from './components/Project.vue';
-import Contact from './components/Contact.vue';
-import Footer from './components/Footer.vue';
+import About from "./components/About.vue";
+import Project from "./components/Project.vue";
+import Contact from "./components/Contact.vue";
+import Footer from "./components/Footer.vue";
 export default {
     components: {
-    Footer,
-		Project,
-    About,
+        Footer,
+        Project,
+        About,
         Nav,
         Home,
-    Contact,
+        Contact,
     },
 };
 </script>
 
-<style >
+<style>
 html {
-	scroll-behavior: smooth;
+    scroll-behavior: smooth;
 }
 </style>
