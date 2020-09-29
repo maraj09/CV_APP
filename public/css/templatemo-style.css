@@ -1076,6 +1076,7 @@ body.lb-disable-scrolling {
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
+    outline: none;
     border: none;
     background-color: rgba(255, 0, 0, 0);
 }
