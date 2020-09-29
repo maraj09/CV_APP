@@ -30,8 +30,8 @@
                         class="nav__link c-blue"
                     >
                         <img src="img/home-icon.png" alt />
-                    </a>
 					<span class="tooltiptext">Home</span>
+                    </a>
                 </li>
                 <li title="About" class="nav__item">
                     <a
@@ -40,8 +40,8 @@
                         class="nav__link c-yellow scrolly"
                     >
                         <img src="img/about-icon.png" alt />
-                    </a>
 					<span class="tooltiptext">About</span>
+                    </a>
 					
                 </li>
                 <li title="Projects" class="nav__item">
@@ -51,8 +51,8 @@
                         class="nav__link c-red"
                     >
                         <img src="img/projects-icon.png" alt />
-                    </a>
 					<span class="tooltiptext">Projects</span>
+                    </a>
 					
                 </li>
                 <li title="Contact" class="nav__item">
@@ -62,8 +62,8 @@
                         class="nav__link c-green"
                     >
                         <img src="img/contact-icon.png" alt />
-                    </a>
 					<span class="tooltiptext">Contact</span>
+                    </a>
 					
                 </li>
             </ul>
@@ -143,9 +143,18 @@ export default {
 <style scoped>
 .afterscroll {
     margin-top: 0px;
-    background-color: #3e4e62af;
+    background-color: #000000af;
 }
 .nav__link__active {
     background: #fa5252;
+}
+.tooltiptext{
+    position: absolute;
+    bottom: 55px;
+    color: white;
+    font-size: 22px;
+    font-weight: 700;
+    visibility: hidden;
+    transition: .01s;
 }
 </style>

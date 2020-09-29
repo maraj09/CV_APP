@@ -38,6 +38,11 @@ $(document).ready(function(){
                 nav:false
             },
             1000:{
+                items:2,
+                nav:true,
+                loop:false
+            },
+            1200:{
                 items:3,
                 nav:true,
                 loop:false
