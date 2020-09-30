@@ -4,7 +4,8 @@
         ------------------------------------------------------------------------------>
         <section class="panel b-yellow" id="2">
             <article class="panel__wrapper">
-                <div class="panel__content " :class="{ 'panel__content--active': inAbout }"> <!-- Using Vue Bind Class To see nav when scroll -->
+                <div class="panel__content " :class="{ 'panel__content--active': inAbout }">
+                    <!-- Using Vue Bind Class To see nav when scroll -->
                     <div class="container">
                         <div class="row">
                             <div class="col-md-12 ">
@@ -116,7 +117,7 @@ export default {
 .left-span {
     margin-top: 50px;
     color: rgb(199, 199, 199);
-    width: 90%;
+    width: 80%;
 }
 .left-span span {
     font-size: 17px;
@@ -129,6 +130,7 @@ export default {
     margin-top: 25px;
     width: 100%;
 }
+
 .arrow::before {
     content: "▹";
     color: rgb(255, 123, 0);
@@ -191,7 +193,6 @@ export default {
         height: 300px;
         width: 45%;
     }
-    
 }
 @media (max-width: 768px) {
     .about-content-body {
@@ -208,11 +209,17 @@ export default {
         top: 30px;
     }
     .about-right {
-        margin-top: 0px;
+        text-align: center;
+        margin-top: 5vh;
+        right: 7%;
     }
     .imglink:hover .portrait_frame {
         top: 25px;
         left: 27%;
+    }
+    .about-left {
+        left:  5%;
+        width: 98%;
     }
 }
 </style>

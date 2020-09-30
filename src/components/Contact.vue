@@ -4,7 +4,8 @@
 		------------------------------------------------------------------------------>
         <section class="panel b-green" id="4">
             <article class="panel__wrapper">
-                <div class="panel__content " :class="{ 'panel__content--active': inContact }"><!-- Using Vue Bind Class To see nav when scroll -->
+                <div class="panel__content " :class="{ 'panel__content--active': inContact }">
+                    <!-- Using Vue Bind Class To see nav when scroll -->
                     <div class="container">
                         <div class="row">
                             <div class="col-md-12">
@@ -67,7 +68,7 @@ export default {
             // getting the current scroll and vh position
             var windowHeight = window.innerHeight;
             var scrollPosition = window.pageYOffset;
-            if (scrollPosition > windowHeight * 2.8) {
+            if (scrollPosition > windowHeight * 2.5) {
                 this.inContact = true;
             } else {
                 this.inContact = false;
@@ -82,7 +83,12 @@ export default {
 </script>
 
 <style scoped>
-.heading{
+.heading {
     padding-top: 25vh;
+}
+@media (max-width: 768px) {
+    .heading {
+        padding-top: 10vh;
+    }
 }
 </style>

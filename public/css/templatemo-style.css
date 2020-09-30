@@ -92,7 +92,6 @@ ul {
     flex: 1;
     position: relative;
 }
-
 .nav__link {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -118,17 +117,21 @@ ul {
     background: #fa5252;
     left: -90px;
     width: 200%;
-    padding-bottom: 30px;
+    padding-bottom: 25%;
 }
 .nav__link:hover .tooltiptext{
     visibility: visible;
 }
-@media (max-width: 640px) {
+@media (max-width: 768px) {
     .nav {
         width: 70px;
     }
     .nav__list {
         height: 90vh;
+    }
+    .nav__link:hover {
+        left: -50px;
+        width: 200%;
     }
 }
 /* Side Menu End  ---------------------------------------------------------*/
@@ -151,9 +154,9 @@ ul {
     width: 110px;
 }
 .topnav-iteams {
-    margin-top: 15px;
+    margin-top: 10px;
     position: absolute;
-    margin-right: 150px;
+    margin-right: 7%;
     top: 0;
     right: 0;
 }
@@ -165,28 +168,21 @@ ul {
     border-radius: 5px;
     width: 100px;
     border: 2px solid rgb(255, 123, 0);
-
     transition: 0.5s;
     font-weight: 700;
     font-size: 15px;
+    margin-top: 5px;
 }
 .topnav-iteams button:hover {
     background-color: rgba(165, 120, 37, 0.842);
 
 }
-@media (max-width: 902px) {
-    .topnav-iteams {
-        right: 30px;
-    }
-}
-@media (max-width: 720px) {
+@media (max-width: 768px) {
     .topnav-iteams button {
-        width: 80px;
-        margin: 0 15px;
+        width: 90px;
+        margin: 10 15px;
     }
-    .topnav-iteams {
-        margin-right: 100px;
-    }
+    
     .topNav a img {
         margin-left: 10px;
         width: 90px;
@@ -194,12 +190,15 @@ ul {
 }
 @media (max-width: 500px) {
     .topnav-iteams button {
-        width: 80px;
+        width: 90px;
         margin: 0 7px;
+        margin-top: 7px;
+        font-weight: 100;
     }
-    .topnav-iteams {
-        margin-right: 70px;
+    .topnav-iteams{
+        margin-top: 5px;
     }
+    
 }
 /* Top Sticky Nav End ---------------------------------------------------------*/
 /* Burger Logo -----------------------------------------------------------------*/
@@ -583,6 +582,7 @@ ul {
     padding: 0px 60px;
     position: relative;
     margin: 0 auto;
+    width: 100%;
 }
 
 .contact-content .heading {
@@ -692,11 +692,10 @@ ul {
         margin-bottom: 30px;
     }
     .home-content {
+        padding-top: 20px;
         text-align: center;
-        margin: 0 auto;
-        height: auto;
-        padding: 0px 30px;
-        width: 100vw;
+        height: 100vh;
+        width: 100%;
     }
     .home-content .home-box-content {
         right: 0;
@@ -723,7 +722,7 @@ ul {
         height: 100vh;
         text-align: center;
         padding: 0px 30px;
-        width: 100vw;
+        width: 100;
     }
     .about-content .heading {
         padding-top: 10%;
@@ -746,9 +745,9 @@ ul {
         margin-right: 15px;
     }
     .projects-content {
-        width: 100vh;
+        width: 100%;
         height: 100vh;
-        padding: 0px 30px;
+        padding: 0px  60px;
     }
     .project-item {
         padding: 0px 120px;
@@ -780,12 +779,24 @@ ul {
         margin-right: 0px;
     }
     .contact-content {
-        height: auto;
-        width: 100vw;
-        padding: 0px 30px;
+        height: 100vh;
+        width: 100%;
+        padding: 0px 0px;
     }
     .contact-content .heading {
         padding-top: 15%;
+    }
+}
+@media (max-width: 650px){
+    .projects-content {
+        width: 150vw;
+        height: 100vh;
+        padding: 0px  60px;
+    }
+    .contact-content {
+        height: 100vh;
+        width: 100vw;
+        padding: 0px 0px;
     }
 }
 

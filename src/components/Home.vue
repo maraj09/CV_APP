@@ -110,7 +110,7 @@ export default {
     }
     @media(max-width: 768px){
         .home-content-body{
-            padding-top: 20vh;
+            padding-top: 8vh;
             
         }
         .home-content-body h1{
@@ -123,7 +123,7 @@ export default {
         }
     @media(max-width: 480px){
         .home-content-body{
-            padding-top: 17vh;
+            padding-top: 7vh;
             margin-left: -10px;
         }
         .home-content-body p:nth-of-type(2){

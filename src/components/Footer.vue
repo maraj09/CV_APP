@@ -74,10 +74,12 @@ export default {};
         margin: 0 auto;
         background: rgba(0, 0, 0, 0.918);
         height: 60px;
+        text-align: left;
+        
     }
     .social li {
         display: inline;
-        margin-left: 50px;
+        margin-left: 13%;
         font-size: 35px;
     }
 }
