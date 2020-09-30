@@ -117,6 +117,7 @@ export default {
             var scrollPosition = window.pageYOffset;
             if (scrollPosition > windowHeight * 1.5) {
                 this.inProject = true;
+                this.$emit("isProject");
             } else {
                 this.inProject = false;
             }

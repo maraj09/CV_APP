@@ -70,6 +70,7 @@ export default {
             var scrollPosition = window.pageYOffset;
             if (scrollPosition > windowHeight * 2.5) {
                 this.inContact = true;
+                this.$emit("isContact");
             } else {
                 this.inContact = false;
             }

@@ -57,15 +57,14 @@
         </section>
         <!-- About Us End ----------------------------------------------------------------
         ------------------------------------------------------------------------------>
-        <Nav :isAbout="inAbout" />
+        
     </div>
 </template>
 <script>
-import Nav from "./Nav.vue";
+
 
 export default {
     components: {
-        Nav,
     },
     data() {
         return {
@@ -79,9 +78,10 @@ export default {
             var scrollPosition = window.pageYOffset;
             if (scrollPosition > windowHeight * 0.75) {
                 this.inAbout = true;
-                this.$emit("markAbout");
+                this.$emit("isAbout");
             } else {
                 this.inAbout = false;
+
             }
         },
     },
