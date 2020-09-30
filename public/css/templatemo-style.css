@@ -722,7 +722,7 @@ ul {
         height: 100vh;
         text-align: center;
         padding: 0px 30px;
-        width: 100;
+        width: 100%;
     }
     .about-content .heading {
         padding-top: 10%;
@@ -797,6 +797,12 @@ ul {
         height: 100vh;
         width: 100vw;
         padding: 0px 0px;
+    }
+    .about-content {
+        height: auto;
+        text-align: center;
+        padding: 0px 30px;
+        width: 100%;
     }
 }
 

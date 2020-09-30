@@ -197,6 +197,7 @@ export default {
 @media (max-width: 768px) {
     .about-content-body {
         padding-top: 3vh;
+        padding-bottom: 300px;
     }
     .portrait {
         height: 250px;
@@ -218,7 +219,7 @@ export default {
         left: 27%;
     }
     .about-left {
-        left:  5%;
+        left: 5%;
         width: 98%;
     }
 }
