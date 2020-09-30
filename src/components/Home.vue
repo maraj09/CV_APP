@@ -117,6 +117,7 @@ export default {
 @media (max-width: 768px) {
     .home-content-body {
         padding-top: 8vh;
+        padding-left: 5% ;
     }
     .home-content-body h1 {
         padding-top: 0;

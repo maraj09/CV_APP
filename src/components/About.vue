@@ -194,10 +194,11 @@ export default {
         width: 45%;
     }
 }
-@media (max-width: 768px) {
+@media (max-width: 767px) {
     .about-content-body {
         padding-top: 3vh;
         padding-bottom: 300px;
+        width: 98%;
     }
     .portrait {
         height: 250px;
