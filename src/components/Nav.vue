@@ -59,13 +59,13 @@ export default {
     data() {
         return {
             isClicked: false,
+            y: "",
+            h: "",
+            afterscroll: false,
             isHome: false,
             isAbout: false,
             isProject: false,
             isContact: false,
-            y: "",
-            h: "",
-            afterscroll: false,
         };
     },
     methods: {
@@ -77,50 +77,35 @@ export default {
             this.h = window.innerHeight;
         },
         //Under This Methods For Mark The Side Menu ! this isnt perfect i will update it !!!
-        markHome() {
+        markMenu() {
             if (this.y < this.h * 0.75) {
                 this.isHome = true;
-            } else {
-                this.isHome = false;
-            }
-        },
-        markAbout() {
-            if (this.y > this.h * 0.75 && this.y < this.h * 1.5) {
-                this.isAbout = true;
-            } else {
                 this.isAbout = false;
-            }
-        },
-        markProject() {
-            if (this.y > this.h * 1.5 && this.y < this.h * 2.5) {
-                this.isProject = true;
-            } else {
                 this.isProject = false;
-            }
-        },
-        markContact() {
-            if (this.y > this.h * 2.5) {
-                this.isContact = true;
-            } else {
                 this.isContact = false;
-            }
-        },
-        addNav() {
-            if (this.y > 0) {
-                this.afterscroll = true;
-            } else {
-                this.afterscroll = false;
+            } else if (this.y > this.h * 0.75 && this.y < this.h * 1.5) {
+                this.isAbout = true;
+                this.isProject = false;
+                this.isContact = false;
+                this.isHome = false;
+            } else if (this.y > this.h * 1.5 && this.y < this.h * 2.5) {
+                this.isProject = true;
+                this.isContact = false;
+                this.isAbout = false;
+                this.isHome = false;
+            } else if (this.y > this.h * 2.5) {
+                this.isContact = true;
+                this.isProject = false;
+                this.isAbout = false;
+                this.isHome = false;
             }
         },
     },
     mounted() {
         // Auto Calling A method when scroll the page
         window.addEventListener("scroll", this.scrollpos);
-        window.addEventListener("scroll", this.markHome);
-        window.addEventListener("scroll", this.markAbout);
-        window.addEventListener("scroll", this.markProject);
-        window.addEventListener("scroll", this.markContact);
         window.addEventListener("scroll", this.addNav);
+        window.addEventListener("scroll", this.markMenu);
     },
 };
 </script>
