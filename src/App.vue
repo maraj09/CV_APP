@@ -4,7 +4,7 @@
         <div class="topNav" :class="{ afterscroll: afterscroll }">
             <!-- For show nav when scrolls -->
             <a href>
-                <img src="./assets/ryzen_nav.png" height="65px" alt srcset />
+                <img src="./assets/ryzen_nav.png"  alt srcset />
             </a>
             <div class="topnav-iteams">
                 <a href>
