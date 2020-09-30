@@ -51,7 +51,7 @@
                 </li>
             </ul>
         </nav>
-        <Home       @isHome='markHome' />
+        <Home       @isHome='markHome' /> <!--  @ or V-bind comming from commponents which is calling methods -->
         <About      @isAbout='markAbout' />
         <Project    @isProject='markProject' />
         <Contact    @isContact='markContact'/>
