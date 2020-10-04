@@ -134,34 +134,13 @@ export default {
 </script>
 
 <style>
-html {
-    scroll-behavior: smooth;
-}
+
 .afterscroll {
     margin-top: 0px;
-    background-color: #000000af;
 }
 .nav__link__active {
     background: #fa5252;
 }
-.tooltiptext {
-    position: absolute;
-    color: white;
-    font-size: 22px;
-    font-weight: 700;
-    visibility: hidden;
-    transition: 0.01s;
-    bottom: 25%;
-}
-@media (max-width: 1200px) {
-    .tooltiptext {
-        bottom: 20%;
-    }
-}
-@media (max-width: 768px) {
-    .tooltiptext {
-        bottom: 17%;
-        font-size: 18px;
-    }
-}
+
+
 </style>

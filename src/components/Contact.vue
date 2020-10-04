@@ -8,13 +8,13 @@
                     <!-- Using Vue Bind Class To see nav when scroll -->
                     <div class="container">
                         <div class="row">
-                            <div class="col-md-12">
+                            <div class=" col-md-10 col-md-offset-1">
                                 <div class="contact-content">
                                     <div class="heading">
                                         <h4>Contact us</h4>
                                     </div>
                                     <div class="row">
-                                        <div class="col-md-8">
+                                        <div class="col-md-12 ">
                                             <div class="contat-form">
                                                 <form id="contact" action="" method="post">
                                                     <fieldset>

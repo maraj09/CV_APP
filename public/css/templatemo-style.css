@@ -5,9 +5,12 @@ Stacked Template
 https://templatemo.com/tm-505-stacked
 
 */
-
+html {
+    scroll-behavior: smooth;
+}
 body {
     font-family: "Roboto", sans-serif;
+    background-color: rgb(0, 0, 0);
 }
 
 p {
@@ -66,7 +69,7 @@ ul {
     z-index: 1;
     top: 0;
     right: 0;
-    width: 90px;
+    width: 100px;
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
 }
@@ -76,7 +79,7 @@ ul {
     display: flex;
     -ms-flex-flow: column wrap;
     flex-flow: column wrap;
-    height: 92vh;
+    height: 90vh;
     -webkit-transform: translate(0, -100%);
     transform: translate(0, -100%);
     -webkit-transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
@@ -119,7 +122,21 @@ ul {
     width: 200%;
     padding-bottom: 25%;
 }
-.nav__link:hover .tooltiptext{
+.tooltiptext {
+    position: absolute;
+    color: white;
+    font-size: 22px;
+    font-weight: 700;
+    visibility: hidden;
+    transition: 0.01s;
+    bottom: 25%;
+}
+@media (max-width: 1200px) {
+    .tooltiptext {
+        bottom: 20%;
+    }
+}
+.nav__link:hover .tooltiptext {
     visibility: visible;
 }
 @media (max-width: 768px) {
@@ -133,85 +150,83 @@ ul {
         left: -50px;
         width: 200%;
     }
+    .tooltiptext {
+        bottom: 17%;
+        font-size: 18px;
+    }
 }
 /* Side Menu End  ---------------------------------------------------------*/
 /* Top Sticky Nav ---------------------------------------------------------*/
 .topNav {
-    margin-top: 10px;
+    margin-top: 3px;
     position: fixed;
     top: 0;
-    background-color: #00000000;
+    background-color: #000000;
     width: 100%;
-    height: 70px;
+    height: 78px;
     transition: 0.2s;
     z-index: 1;
 }
 .topNav a img {
     color: white;
-    font-size: 20px;
-    margin-left: 50px;
-    margin-top: 5px;
+    margin-left: 5%;
+    margin-top: 7px;
     width: 110px;
 }
 .topnav-iteams {
-    margin-top: 10px;
+    margin-top: 18px;
     position: absolute;
-    margin-right: 7%;
     top: 0;
-    right: 0;
+    right: 6%;
+    width: 10%;
+    min-width: 350px;
+}
+.topnav-iteams a {
+    position: relative;
+    margin-left: 10%;
 }
 .topnav-iteams button {
     padding: 8px;
-    margin: 0 20px;
     background-color: transparent;
     color: rgb(255, 255, 255);
     border-radius: 5px;
     width: 100px;
+    display: inline-block;
     border: 2px solid rgb(255, 123, 0);
     transition: 0.5s;
     font-weight: 700;
     font-size: 15px;
-    margin-top: 5px;
 }
 .topnav-iteams button:hover {
     background-color: rgba(165, 120, 37, 0.842);
-
 }
-@media (max-width: 1200px){
-    .topnav-iteams a:nth-of-type(2) {
-        margin-right: 50px;
-    }
-} 
 @media (max-width: 768px) {
-    .topnav-iteams a:nth-of-type(2) {
-        margin-right: 0px;
+    .topnav-iteams {
+        min-width: 200px;
     }
     .topnav-iteams button {
-        width: 90px;
-        margin: 10 15px;
+        width: 80px;
+        padding: 6px;
+        margin-top: -2px;
     }
-    
+    .topnav-iteams a:nth-child(2) {
+        margin-left: 5%;
+    }
+    .topnav-iteams {
+        right: 0%;
+    }
     .topNav a img {
-        margin-left: 10px;
-        width: 90px;
+        color: white;
+        margin-left: 0%;
+        margin-top: 1%;
+        width: 100px;
     }
 }
-@media (max-width: 500px) {
-    .topnav-iteams button {
-        width: 90px;
-        margin: 0 7px;
-        margin-top: 7px;
-        font-weight: 100;
-    }
-    .topnav-iteams{
-        margin-top: 5px;
-    }
-    
-}
+/************ For Top And Side Menu Some Css also in nav component --------------------------------------------------------------------------------------------------------------------------------------------------------**************----*/
 /* Top Sticky Nav End ---------------------------------------------------------*/
 /* Burger Logo -----------------------------------------------------------------*/
 .burger {
-    height: 71px;
+    height: 79px;
     margin: -1px 0;
     position: relative;
     display: -webkit-box;
@@ -277,7 +292,7 @@ ul {
 }
 @media (max-width: 640px) {
     .burger {
-        height: 70px;
+        height: 78px;
     }
     .burger__patty {
         -webkit-transform: scale(0.8);
@@ -333,41 +348,112 @@ ul {
     margin: 0 0 25px 0;
 }
 
+/*
+========================
+------ HOME STYLE ------
+========================
+*/
 .b-blue {
     margin-bottom: -2px;
     background-image: url(../img/bgImg/1_yJccbiTGbc0hQainKAQD2g.jpeg);
     background-repeat: no-repeat;
     background-size: cover;
     width: 100%;
-    overflow: hidden;
     background-attachment: fixed;
     background-position: 0% 70%;
+    margin-top: 80px;
 }
-
-.b-red {
-    background-image: url(../img/bgImg/1_yJccbiTGbc0hQainKAQD2g.jpeg);
-    background-repeat: no-repeat;
-    background-size: cover;
+.home-content {
+    overflow: visible;
+    background-color: rgba(45, 58, 75, 0.904);
+    position: relative;
+    height: 100vh;
+    padding: 0px 60px;
+    padding-bottom: 75%;
+    display: block;
+    margin: 0 auto;
+    min-height: 600px;
+}
+.home-content-body {
+    position: relative;
+    color: white;
     width: 100%;
-    overflow: hidden;
-    background-attachment: fixed;
-    margin-top: -2px;
-    background-position: 0% 70%;
-
+    text-align: left;
+    padding: 20% 2%;
+    display: inline-block;
+    padding-top: 20%;
+    padding-bottom: 10%;
 }
-
-.b-green {
-    margin-top: -2px;
-    background-image: url(../img/bgImg/fc4319d9c93f88e9b7af1b6979e3bee6.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    width: 100%;
-    overflow: hidden;
-    background-attachment: fixed;
-    background-position: 0% 70%;
-
+.home-content-body h1 {
+    padding-top: 0;
+    font-size: 50px;
+    font-weight: 700;
+    color: rgba(185, 185, 185, 0.925);
 }
-
+.home-content-body p:nth-of-type(1) {
+    color: rgb(255, 123, 0);
+    font-size: 18px;
+    margin-left: 2px;
+    word-spacing: 5px;
+}
+.home-content-body a {
+    color: rgb(255, 123, 0);
+}
+.home-content-body p:nth-of-type(2) {
+    color: rgba(185, 185, 185, 0.925);
+    font-size: 18px;
+    width: 50%;
+    margin-left: 2px;
+    min-width: 400px;
+}
+.home-content-body h2 {
+    font-size: 60px;
+    font-weight: bold;
+}
+.home-content-body button {
+    height: 50px;
+    background: transparent;
+    outline: none !important;
+    border: 2px solid rgb(255, 123, 0);
+    border-radius: 3px;
+    padding: 10px 45px;
+    margin-left: 2px;
+    margin-top: 50px;
+    color: white;
+    transition: 0.3s;
+}
+.home-content-body button:hover {
+    background: rgba(255, 166, 0, 0.267);
+}
+@media (max-width: 768px) {
+    .home-content-body {
+        padding-top: 8vh;
+        padding-left: 1%;
+    }
+    .home-content-body h1 {
+        padding-top: 0;
+        font-size: 40px;
+    }
+    .home-content-body button {
+        margin-top: 25px;
+        margin-bottom: 50px;
+    }
+    @media (max-width: 480px) {
+        .home-content-body {
+            padding-top: 7vh;
+            margin-left: 20px;
+        }
+        .home-content-body p:nth-of-type(2) {
+            min-width: 350px;
+        }
+    }
+}
+/************ For Home No css available in components | All are here***************/
+/*
+========================
+------ ABOUT STYLE -----
+========================
+*/
 .b-yellow {
     margin-top: -1px;
     background-image: url(../img/bgImg/fc4319d9c93f88e9b7af1b6979e3bee6.jpg);
@@ -377,160 +463,169 @@ ul {
     overflow: hidden;
     background-attachment: fixed;
     background-position: center;
-
 }
-
-/*
-========================
------- HOME STYLE ------
-========================
-*/
-
-.home-content {
-    height: 90vh;
-    background-color:rgba(45, 58, 75, 0.904);
-    padding: 0px 60px;
-    position: relative;
-    margin: 10vh auto 0 auto;
-}
-
-.home-content h1 {
-    padding-top: 120px;
-    font-size: 32px;
-    text-transform: uppercase;
-    color: #fff;
-    font-weight: 300;
-}
-
-.home-content h1 em {
-    margin-right: 20px;
-    font-size: 80px;
-    font-style: normal;
-    font-weight: 800;
-}
-
-.home-content .home-box-content {
-    margin-top: 45px;
-    background-color: #455871;
-    position: relative;
-    right: -100px;
-    padding: 30px;
-    display: inline-block;
-}
-
-.home-content .left-text {
-    float: left;
-    width: 60%;
-}
-
-.home-content .left-text h4 {
-    display: inline-block;
-    padding-bottom: 5px;
-    font-size: 22px;
-    color: #fff;
-    font-weight: 400;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    margin-top: 0px;
-    margin-bottom: 10px;
-    border-bottom: 2px solid #fff;
-}
-
-.home-content .left-text h4 em {
-    color: #fa5252;
-    font-style: normal;
-}
-
-.home-content .left-text p {
-    color: #fff;
-    margin-bottom: 25px;
-}
-
-.home-content .right-image {
-    float: right;
-}
-
-/*
-========================
------- ABOUT STYLE -----
-========================
-*/
 
 .about-content {
+    overflow: visible;
     height: 100vh;
     background-color: rgba(45, 58, 75, 0.904);
-    padding: 0px 60px;
+    min-height: 900px;
     position: relative;
     margin: 0 auto;
-    
+    display: block;
 }
 
-.about-content .heading {
-    padding-top: 40%;
-}
-
-.about-box-content {
-    margin-left: -100px;
-    margin-right: 100px;
-}
-
-.about-box-content img {
+.about-content-body {
+    position: relative;
+    color: white;
     width: 100%;
-    overflow: hidden;
-    position: absolute;
+    margin-left: 50px;
+    padding: 0px 20px;
+    padding-top: 15vh;
+    text-align: left;
+    line-height: 1.1;
+}
+.about-content-body h3 {
+    font-size: 25px;
+    font-weight: 700;
+    color: rgb(255, 123, 0);
+}
+.side_line {
+    background: rgb(255, 123, 0);
+    height: 1px;
+    width: 50%;
+    max-width: 300px;
+    margin-top: -25px;
+    margin-left: 120px;
+}
+.left-span {
+    margin-top: 50px;
+    color: rgb(199, 199, 199);
+    width: 80%;
+}
+.left-span span {
+    font-size: 17px;
+    position: relative;
+    line-height: 1.7;
+    word-spacing: 3px;
+}
+.left-span p {
+    font-size: 17px;
+    margin-top: 25px;
+    width: 100%;
 }
 
-.about-content .about-box-text {
-    background-color: #fff;
-    padding: 30px;
-    margin-top: 60px;
+.arrow::before {
+    content: "▹";
+    color: rgb(255, 123, 0);
+    font-size: 16px;
+    padding-right: 10px;
 }
-
-.about-content .about-box-text h4 {
+.left-ul {
+    margin-top: 15px;
+    min-width: 450px;
+    font-size: 14px;
+    color: rgb(199, 199, 199);
+}
+.about_skill {
     display: inline-block;
-    padding-bottom: 5px;
-    font-size: 22px;
-    color: #121212;
-    font-weight: 400;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    margin-top: 0px;
-    margin-bottom: 15px;
-    border-bottom: 2px solid #eee;
+    width: 50%;
+    padding: 5px 0;
 }
-
-.about-content .about-box-text p {
-    color: #343434;
-    margin-bottom: 20px;
+.portrait:hover {
+    filter: sepia(0%);
 }
-
-.about-content .primary-button a:hover {
-    background-color: transparent;
-    color: #fa5252;
-    border: 1px solid #fa5252;
-    -moz-transition: all 0.2s linear;
-    -o-transition: all 0.2s linear;
-    -webkit-transition: all 0.2s linear;
+.about-right {
+    position: relative;
 }
-
+.portrait {
+    position: absolute;
+    width: 55%;
+    min-width: 210px;
+    top: 55px;
+    left: 25%;
+    height: 300px;
+    margin: 0 auto !important;
+    z-index: 2;
+    filter: sepia(90%);
+    transition: 0.3s;
+}
+.portrait_frame {
+    position: absolute;
+    left: 30%;
+    top: 75px;
+    border: 3px solid rgb(255, 123, 0);
+    transition: 0.3s;
+    width: 55%;
+    min-width: 210px;
+    height: 300px;
+}
+.imglink:hover .portrait_frame {
+    top: 69px;
+    left: 28%;
+}
+@media (max-width: 768px) {
+    .about-content-body {
+        padding-top: 5vh;
+        padding-bottom: 300px;
+        width: 98%;
+        left: 5%;
+    }
+    .portrait {
+        height: 250px;
+        width: 30%;
+        top: 10px;
+    }
+    .portrait_frame {
+        height: 250px;
+        width: 30%;
+        top: 30px;
+    }
+    .about-right {
+        text-align: center;
+        margin-top: 3vh;
+        right: 10%;
+    }
+    .imglink:hover .portrait_frame {
+        top: 25px;
+        left: 27%;
+    }
+    .about-left {
+        left: 0%;
+        width: 94%;
+    }
+}
+/************ For about  No css available in components | All are here***************/
 /*
 ========================
 ---- PROJECTS STYLE ----
 ========================
 */
-
+.b-red {
+    background-image: url(../img/bgImg/1_yJccbiTGbc0hQainKAQD2g.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    overflow: hidden;
+    background-attachment: fixed;
+    margin-top: -2px;
+    background-position: 0% 70%;
+}
 .projects-content {
     height: 100vh;
     background-color: rgba(45, 58, 75, 0.904);
-    padding: 0px 220px;
-    padding-left: 220px;
+    padding: 0px 60px;
     position: relative;
     margin: 0 auto;
+    overflow: visible;
+    display: block;
+    min-height: 900px;
     
 }
 
 .projects-content .heading {
     padding-top: 30%;
+    
 }
 
 .project-item {
@@ -542,21 +637,21 @@ ul {
 }
 
 .projects-content .owl-carousel {
-    margin: 0 -30%;
-    width: 160%;
+    margin: 0 -5%;
+    width: 112%;
 }
-
+.owl-item img {
+    display: block;
+    width: 90%;
+}
 .projects-content .text-content {
     margin-left: 15px;
-    margin-right: 15px;
     background-color: #fff;
-    padding: 25px 30px;
+    padding: 10px 15px;
     margin-top: -45px;
     position: relative;
-    z-index: 2;
     width: 100%;
 }
-
 .projects-content .text-content h4 {
     display: inline-block;
     padding-bottom: 5px;
@@ -577,20 +672,53 @@ ul {
     -o-transition: all 0.2s linear;
     -webkit-transition: all 0.2s linear;
 }
+@media (max-width: 768px) {
+    .projects-content {
+        width: 100vh;
+        height: 100vh;
+        
+    }
+    .project-item img {
+        max-width: 50%;
+        min-width: 350px;
+        margin: 0 auto;
+    }
+    .projects-content .heading {
+        padding-top: 25%;
+    }
+    .projects-content .owl-carousel {
+        margin: 0 -6%;
 
+    }
+    .projects-content .text-content {
+        display: none;
+    }
+}
+/************ No css available in components for projects in project components ***************/
 /*
 ========================
 ---- CONTACT STYLE -----
 ========================
 */
-
-.contact-content {
-    height: 100vh;
-    background-color: rgba(45, 58, 75, 0.904);
-    padding: 0px 60px;
-    position: relative;
-    margin: 0 auto;
+.b-green {
+    margin-top: -2px;
+    background-image: url(../img/bgImg/fc4319d9c93f88e9b7af1b6979e3bee6.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
     width: 100%;
+    overflow: hidden;
+    background-attachment: fixed;
+    background-position: 0% 70%;
+}
+.contact-content {
+    overflow: visible;
+    background-color: rgba(45, 58, 75, 0.904);
+    position: relative;
+    height: 100vh;
+    padding: 0px 5%;
+    min-height: 900px;
+    display: block;
+    margin: 0 auto;
 }
 
 .contact-content .heading {
@@ -599,8 +727,8 @@ ul {
 
 .contact-content .contat-form {
     background-color: rgba(250, 250, 250, 0.03);
-    padding: 30px 80px 30px 30px;
-    margin-right: -50px;
+    padding: 30px 80px 30px 20px;
+    margin: 0 auto;
 }
 
 .contact-content input {
@@ -660,15 +788,6 @@ ul {
     -webkit-transition: all 0.2s linear;
 }
 
-.contact-content .more-info {
-    background-color: #fff;
-    padding: 30px;
-    margin-top: 50px;
-    position: absolute;
-    margin-left: -30px;
-    margin-right: -100px;
-}
-
 .footer {
     text-align: center;
 }
@@ -686,132 +805,6 @@ ul {
 
 .footer a {
     color: #ff6;
-}
-
-/*
-========================================
----------- RESPONSIVE STYLE ------------
-========================================
-*/
-
-@media (max-width: 768px) {
-    .heading h4 {
-        font-size: 22px;
-        margin-bottom: 30px;
-    }
-    .home-content {
-        padding-top: 20px;
-        text-align: center;
-        height: 100vh;
-        width: 100%;
-    }
-    .home-content .home-box-content {
-        right: 0;
-        margin-bottom: 30px;
-    }
-    .home-content h1 {
-        margin-bottom: 0px;
-        padding-top: 60px;
-        font-size: 22px;
-    }
-    .home-content h1 em {
-        font-size: 36px;
-    }
-    .home-content .left-text {
-        float: none;
-        width: auto;
-    }
-    .home-content .right-image {
-        text-align: center;
-        float: none;
-        margin-top: 30px;
-    }
-    .about-content {
-        height: 100vh;
-        text-align: center;
-        padding: 0px 30px;
-        width: 100%;
-    }
-    .about-content .heading {
-        padding-top: 10%;
-    }
-    .about-box-content {
-        margin-left: 0px;
-        margin-right: 0px;
-    }
-    .about-box-text {
-        margin-bottom: 30px;
-    }
-    .about-box-content img {
-        position: relative;
-    }
-    .about-content .about-box-text {
-        background-color: #fff;
-        padding: 30px;
-        margin-top: -30px;
-        margin-left: 15px;
-        margin-right: 15px;
-    }
-    .projects-content {
-        width: 100%;
-        height: 100vh;
-        padding: 0px  60px;
-    }
-    .project-item {
-        padding: 0px 120px;
-    }
-    .project-item img {
-        max-width: 100%;
-    }
-    .projects-content .heading {
-        padding-top: 25%;
-    }
-    .projects-content .owl-carousel {
-        margin: 0;
-        width: 100%;
-    }
-    .projects-content .text-content {
-        display: none;
-    }
-    .contact-content .more-info {
-        padding: 30px;
-        margin-top: 0px;
-        margin-left: 0px;
-        margin-right: 0px;
-        position: relative;
-        margin-bottom: 60px;
-    }
-    .contact-content .contat-form {
-        background-color: rgba(250, 250, 250, 0.03);
-        padding: 20px;
-        margin-right: 0px;
-    }
-    .contact-content {
-        height: 100vh;
-        width: 100%;
-        padding: 0px 0px;
-    }
-    .contact-content .heading {
-        padding-top: 15%;
-    }
-}
-@media (max-width: 650px){
-    .projects-content {
-        width: 150vw;
-        height: 100vh;
-        padding: 0px  60px;
-    }
-    .contact-content {
-        height: 100vh;
-        width: 100vw;
-        padding: 0px 0px;
-    }
-    .about-content {
-        height: auto;
-        text-align: center;
-        padding: 0px 30px;
-        width: 100%;
-    }
 }
 
 /*
@@ -1088,10 +1081,7 @@ body.lb-disable-scrolling {
     -webkit-tap-highlight-color: transparent;
     -webkit-touch-callout: none;
 }
-.owl-item img {
-    display: block;
-    width: 100%;
-}
+
 
 .owl-carousel .owl-nav.disabled,
 .owl-carousel .owl-dots.disabled {

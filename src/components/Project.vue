@@ -4,10 +4,11 @@
 		-------------------------------------------------------------------------->
         <section class="panel b-red" id="3">
             <article class="panel__wrapper">
-                <div class="panel__content" :class="{ 'panel__content--active': inProject }"><!-- Using Vue Bind Class To see nav when scroll -->
+                <div class="panel__content" :class="{ 'panel__content--active': inProject }">
+                    <!-- Using Vue Bind Class To see nav when scroll -->
                     <div class="container">
                         <div class="row">
-                            <div class="col-md-12 ">
+                            <div class="col-md-10 col-md-offset-1 ">
                                 <div class="projects-content">
                                     <div class="projects-content-body">
                                         <div class="heading">
@@ -50,7 +51,7 @@
                                                 <a href="img/project-item-04.jpg" data-lightbox="image-1"><img src="img/project-item-04.jpg" alt=""/></a>
                                                 <div class="text-content">
                                                     <h4>Next Moment</h4>
-                                                    <p>Lorem ipsum dolor sit amet, adipis scing elit etiam sit amet ante vehicula, aliquam  </p>
+                                                    <p>Lorem ipsum dolor sit amet, adipis scing elit etiam sit amet ante vehicula, aliquam</p>
                                                     <div class="primary-button">
                                                         <a href="#">Discover More</a>
                                                     </div>
@@ -102,9 +103,7 @@
 
 <script>
 export default {
-    components: {
-        
-    },
+    components: {},
     data() {
         return {
             inProject: false,
@@ -131,38 +130,4 @@ export default {
 </script>
 
 <style scoped>
-.heading{
-	padding: 0;
-	padding-top: 10vh;
-}
-button.owl-dot{
-	background: red !important;
-}
-@media (max-width: 1200px ) {
-	.projects-content{
-    padding: 0px 140px;
-	
-	}
-	.projects-content .text-content{
-    width: 105%;
-    margin-left: 5px;
-
-	}
-	.owl-item img{
-		width: 100%;
-	}
-	.owl-carousel{
-    margin-top: -25px;
-	}
-	
-}
-@media (max-width: 768px ){
-	.projects-content{
-    padding: 0px 0px;
-	
-	}
-	.owl-carousel{
-    margin-top: 100px;
-	}
-}
 </style>
