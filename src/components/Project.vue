@@ -114,8 +114,7 @@ export default {
             // getting the current scroll and vh position
             var windowHeight = window.innerHeight;
             var scrollPosition = window.pageYOffset;
-            var browserH = screen.height;
-            if (browserH < 850) {
+            if (windowHeight < 850) {
                 if (scrollPosition > 1400) {
                     this.inProject = true;
                     this.$emit("isProject");

@@ -369,10 +369,9 @@ ul {
     position: relative;
     height: 100vh;
     padding: 0px 60px;
-    padding-bottom: 75%;
     display: block;
     margin: 0 auto;
-    min-height: 600px;
+    min-height: 650px;
 }
 .home-content-body {
     position: relative;
@@ -382,7 +381,6 @@ ul {
     padding: 20% 2%;
     display: inline-block;
     padding-top: 20%;
-    padding-bottom: 10%;
 }
 .home-content-body h1 {
     padding-top: 0;
