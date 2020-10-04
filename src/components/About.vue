@@ -57,15 +57,11 @@
         </section>
         <!-- About Us End ----------------------------------------------------------------
         ------------------------------------------------------------------------------>
-        
     </div>
 </template>
 <script>
-
-
 export default {
-    components: {
-    },
+    components: {},
     data() {
         return {
             inAbout: false,
@@ -76,12 +72,21 @@ export default {
             // getting the current scroll and vh position
             var windowHeight = window.innerHeight;
             var scrollPosition = window.pageYOffset;
-            if (scrollPosition > windowHeight * 0.75) {
-                this.inAbout = true;
-                this.$emit("isAbout");
+            var browserH = screen.height;
+            if (browserH < 850) {
+                if (scrollPosition > 490) {
+                    this.inAbout = true;
+                    this.$emit("isAbout");
+                } else {
+                    this.inAbout = false;
+                }
             } else {
-                this.inAbout = false;
-
+                if (scrollPosition > windowHeight * 0.75) {
+                    this.inAbout = true;
+                    this.$emit("isAbout");
+                } else {
+                    this.inAbout = false;
+                }
             }
         },
     },
@@ -92,6 +97,4 @@ export default {
 };
 </script>
 
-<style>
-
-</style>
+<style></style>

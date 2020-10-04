@@ -68,11 +68,22 @@ export default {
             // getting the current scroll and vh position
             var windowHeight = window.innerHeight;
             var scrollPosition = window.pageYOffset;
-            if (scrollPosition > windowHeight * 2.5) {
-                this.inContact = true;
-                this.$emit("isContact");
+            var browserH = screen.height;
+            console.log(scrollPosition);
+            if (browserH < 850) {
+                if (scrollPosition > 2200) {
+                    this.inContact = true;
+                    this.$emit("isContact");
+                } else {
+                    this.inContact = false;
+                }
             } else {
-                this.inContact = false;
+                if (scrollPosition > windowHeight * 2.5) {
+                    this.inContact = true;
+                    this.$emit("isContact");
+                } else {
+                    this.inContact = false;
+                }
             }
         },
     },
@@ -90,6 +101,9 @@ export default {
 @media (max-width: 768px) {
     .heading {
         padding-top: 10vh;
+    }
+    .contact-content{
+        width: 100vw;
     }
 }
 </style>

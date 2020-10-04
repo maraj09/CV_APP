@@ -114,11 +114,21 @@ export default {
             // getting the current scroll and vh position
             var windowHeight = window.innerHeight;
             var scrollPosition = window.pageYOffset;
-            if (scrollPosition > windowHeight * 1.5) {
-                this.inProject = true;
-                this.$emit("isProject");
+            var browserH = screen.height;
+            if (browserH < 850) {
+                if (scrollPosition > 1400) {
+                    this.inProject = true;
+                    this.$emit("isProject");
+                } else {
+                    this.inProject = false;
+                }
             } else {
-                this.inProject = false;
+                if (scrollPosition > windowHeight * 1.5) {
+                    this.inProject = true;
+                    this.$emit("isProject");
+                } else {
+                    this.inProject = false;
+                }
             }
         },
     },
