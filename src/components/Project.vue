@@ -115,7 +115,7 @@ export default {
             var windowHeight = window.innerHeight;
             var scrollPosition = window.pageYOffset;
             if (windowHeight < 850) {
-                if (scrollPosition > 1400) {
+                if (scrollPosition > 1200) {
                     this.inProject = true;
                     this.$emit("isProject");
                 } else {

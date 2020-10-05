@@ -23,7 +23,7 @@
 
 // Place any jQuery/helper plugins in here.
 $(document).ready(function(){
-
+    $(this).scrollTop(0);
     $('.owl-carousel').owlCarousel({
         loop:true,
         margin:30,
