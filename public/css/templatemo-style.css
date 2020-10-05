@@ -135,9 +135,13 @@ ul {
     .tooltiptext {
         bottom: 12%;
     }
+    
+}
+@media(max-height: 600px){
     .nav__list{
-        height: 80vh;
+        height: 85vh;
     } 
+    
 }
 .nav__link:hover .tooltiptext {
     visibility: visible;
