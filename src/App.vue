@@ -137,10 +137,13 @@ export default {
 
 .afterscroll {
     margin-top: 0px;
+    background-color: rgba(0, 0, 0, 0.863);
 }
 .nav__link__active {
     background: #fa5252;
 }
+
+    
 
 
 </style>

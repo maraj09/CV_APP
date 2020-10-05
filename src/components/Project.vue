@@ -51,7 +51,7 @@
                                                 <a href="img/project-item-04.jpg" data-lightbox="image-1"><img src="img/project-item-04.jpg" alt=""/></a>
                                                 <div class="text-content">
                                                     <h4>Next Moment</h4>
-                                                    <p>Lorem ipsum dolor sit amet, adipis scing elit etiam sit amet ante vehicula, aliquam</p>
+                                                    <p>Lorem ipsum dolor sit amet, adipis scing elit etiamam sit amet ante sit amet ante vehicula, aliquam</p>
                                                     <div class="primary-button">
                                                         <a href="#">Discover More</a>
                                                     </div>

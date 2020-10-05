@@ -93,15 +93,4 @@ export default {
 </script>
 
 <style scoped>
-.heading {
-    padding-top: 25vh;
-}
-@media (max-width: 768px) {
-    .heading {
-        padding-top: 10vh;
-    }
-    .contact-content{
-        width: 100vw;
-    }
-}
 </style>

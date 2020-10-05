@@ -131,10 +131,13 @@ ul {
     transition: 0.01s;
     bottom: 25%;
 }
-@media (max-width: 1200px) {
+@media(max-height: 700px){
     .tooltiptext {
-        bottom: 20%;
+        bottom: 12%;
     }
+    .nav__list{
+        height: 80vh;
+    } 
 }
 .nav__link:hover .tooltiptext {
     visibility: visible;
@@ -150,10 +153,6 @@ ul {
         left: -50px;
         width: 200%;
     }
-    .tooltiptext {
-        bottom: 17%;
-        font-size: 18px;
-    }
 }
 /* Side Menu End  ---------------------------------------------------------*/
 /* Top Sticky Nav ---------------------------------------------------------*/
@@ -161,11 +160,13 @@ ul {
     margin-top: 3px;
     position: fixed;
     top: 0;
-    background-color: #000000;
+    background-color: #00000000;
     width: 100%;
     height: 78px;
     transition: 0.2s;
     z-index: 1;
+    position: fixed;
+    margin-top: 7px;
 }
 .topNav a img {
     color: white;
@@ -361,26 +362,25 @@ ul {
     width: 100%;
     background-attachment: fixed;
     background-position: 0% 70%;
-    margin-top: 80px;
 }
 .home-content {
     overflow: visible;
     background-color: rgba(45, 58, 75, 0.904);
     position: relative;
-    height: 100vh;
+    height: auto;
     padding: 0px 60px;
     display: block;
-    margin: 0 auto;
     min-height: 650px;
+    margin-top: 78px;
 }
 .home-content-body {
     position: relative;
     color: white;
     width: 100%;
     text-align: left;
-    padding: 20% 2%;
+    padding: 10% 2%;
     display: inline-block;
-    padding-top: 20%;
+    padding-top: 15%;
 }
 .home-content-body h1 {
     padding-top: 0;
@@ -465,11 +465,9 @@ ul {
 
 .about-content {
     overflow: visible;
-    height: 100vh;
     background-color: rgba(45, 58, 75, 0.904);
-    min-height: 900px;
+    min-height: 750px;
     position: relative;
-    margin: 0 auto;
     display: block;
 }
 
@@ -479,7 +477,7 @@ ul {
     width: 100%;
     margin-left: 50px;
     padding: 0px 20px;
-    padding-top: 15vh;
+    padding-top: 7%;
     text-align: left;
     line-height: 1.1;
 }
@@ -610,19 +608,18 @@ ul {
     background-position: 0% 70%;
 }
 .projects-content {
-    height: 100vh;
     background-color: rgba(45, 58, 75, 0.904);
     padding: 0px 60px;
     position: relative;
     margin: 0 auto;
     overflow: visible;
     display: block;
-    min-height: 900px;
+    min-height: 750px;
     
 }
 
 .projects-content .heading {
-    padding-top: 30%;
+    padding-top: 15%;
     
 }
 
@@ -672,8 +669,7 @@ ul {
 }
 @media (max-width: 768px) {
     .projects-content {
-        width: 100vh;
-        height: 100vh;
+        width: 96vh;
         
     }
     .project-item img {
@@ -712,16 +708,15 @@ ul {
     overflow: visible;
     background-color: rgba(45, 58, 75, 0.904);
     position: relative;
-    height: 100vh;
     padding: 0px 5%;
-    min-height: 900px;
+    min-height: 500px;
     display: block;
     margin: 0 auto;
     
 }
 
 .contact-content .heading {
-    padding-top: 35%;
+    padding-top: 15%;
 }
 
 .contact-content .contat-form {
