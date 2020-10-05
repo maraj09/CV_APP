@@ -68,7 +68,6 @@ export default {
             // getting the current scroll and vh position
             var windowHeight = window.innerHeight;
             var scrollPosition = window.pageYOffset;
-            console.log(scrollPosition);
             if (windowHeight < 850) {
                 if (scrollPosition > 2200) {
                     this.inContact = true;
